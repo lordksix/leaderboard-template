@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.leaderboard-app {
+  padding-inline: max(2.5vw, 10px);
+  padding-block: max(5vh, 20px);
+  width: min(95vw, 600px);
+}
+
+.leaderboard-section {
+  display: grid;
+  padding-inline: max(2.5vw, 10px);
+  padding-block: max(2.5vh, 10px);
+  width: min(85vw, 550px);
+  column-gap: max(20px, 7.5vw);
+  grid-template-columns: 1fr auto;
+}
+
+.leaderboard-side {
+  display: flex;
+  flex-flow: column;
+  gap: max(1.5vh, 10px);
+}
+
+.leaderboard-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.score-list {
+  border: 2px solid black;
+}
+
+.score-item {
+  padding-inline-start: max(1vw, 5px);
+  padding-block: max(0.5vh, 2px);
+}
+
+.score-item:nth-child(even) {
+  background-color: gainsboro;
+}
+
+.leaderboard-label {
+  display: none;
+}
+
+.leaderboard-btn {
+  padding-inline: 7px;
+  padding-block: 5px;
+}
+
+.leaderboard-submit {
+  align-self: flex-end;
+}
