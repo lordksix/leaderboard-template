@@ -20,7 +20,7 @@ li {
   padding-inline: max(2.5vw, 10px);
   padding-block: max(2.5vh, 10px);
   width: min(85vw, 550px);
-  column-gap: max(20px, 7.5vw);
+  column-gap: max(20px, 5vw);
   grid-template-columns: 1fr auto;
 }
 

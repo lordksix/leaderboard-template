@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard Template</title>
+<script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
+<body>
+  <main class="leaderboard-app">
+    <h1>Leaderboard</h1>
+    <section class="leaderboard-section" aria-label="leaderboard App interface">
+      <div class="leaderboard-side">
+        <header class="leaderboard-header">
+          <h2>Recent scores</h2>
+          <button type="button" class="leaderboard-btn">Refresh</button>
+        </header>
+        <ul class="score-list">
+          <li class="score-item">Name: 100</li>
+          <li class="score-item">Name: 20</li>
+          <li class="score-item">Name: 50</li>
+          <li class="score-item">Name: 78</li>
+          <li class="score-item">Name: 125</li>
+          <li class="score-item">Name: 77</li>
+          <li class="score-item">Name:42</li>
+        </ul>
+      </div>
+      <div class="leaderboard-side">
+        <h2>Add your score</h2>
+        <label for="name" class="leaderboard-label">Name</label>
+        <input type="text" name="name" id="name" placeholder="Your name" aria-placeholder="Input your name">
+        <label for="score" class="leaderboard-label">Score</label>
+        <input type="number" name="score" id="score" placeholder="Your score" aria-placeholder="Input your score">
+        <button type="submit" class="leaderboard-btn leaderboard-submit">Submit</button>
+      </div>
+    </section>
+</main>
+  
+
+</body>
+</html>
