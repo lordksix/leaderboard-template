@@ -1,4 +1,5 @@
 import './index.css';
+import './asset/resource/icons.svg';
 import { printPostResponse, printList, loadList } from './modules/utils.js';
 
 const baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';

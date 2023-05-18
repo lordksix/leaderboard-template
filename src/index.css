@@ -1,3 +1,7 @@
+:root {
+  --svg-side: clamp(16px, (100vw - 320px) * 1000, clamp(20px, (100vw - 640px) * 1000, clamp(25px, (100vw - 1280px) * 1000, 30px)));
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -41,8 +45,13 @@ li {
 
 .leaderboard-header {
   display: grid;
-  grid-template-columns: 8fr 1fr;
+  grid-template-columns: auto 8fr 1fr;
   column-gap: max(7.5px, 2vw);
+}
+
+section svg {
+  height: var(--svg-side);
+  width: var(--svg-side);
 }
 
 .score-list {
@@ -79,7 +88,13 @@ li {
   cursor: pointer;
 }
 
-.leaderboard-btn:hover {
+.profile-generic {
+  z-index: 1;
+  cursor: pointer;
+}
+
+.leaderboard-btn:hover,
+.profile-generic:hover {
   background-color: rgb(114, 46, 46);
   box-shadow: 0 0 2px 2px gainsboro;
 }
