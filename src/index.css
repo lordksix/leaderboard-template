@@ -25,9 +25,9 @@ li {
 
 .leaderboard-section {
   display: grid;
-  padding-inline: max(2.5vw, 10px);
+  padding-inline: max(2vw, 10px);
   padding-block: max(2.5vh, 10px);
-  width: min(85vw, 550px);
+  width: min(91vw, 550px);
   column-gap: max(20px, 3vw);
   grid-template-columns: auto 1fr;
 }
