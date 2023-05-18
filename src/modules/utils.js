@@ -1,6 +1,6 @@
 import { createList } from './ListItemMod.js';
 import { handleScoreFormSubmit } from './PostForm.js';
-import { handleRefreshScores } from './GetAPI.js';
+import { handleRefreshScores, loadRefreshScores } from './GetAPI.js';
 
 const processDataScore = (dataSet) => {
   const dataStringArr = dataSet.map((data) => `${data.user}: ${data.score}`);
@@ -35,6 +35,15 @@ const printList = async (event) => {
   }
 };
 
+const loadList = async (event) => {
+  const dataResponse = await loadRefreshScores(event);
+  if (dataResponse instanceof Error) appendResponsePara('Unable to Fetch Data');
+  else {
+    const listFrag = await createListFrag(dataResponse.result);
+    await appendListFrag(listFrag);
+  }
+};
+
 const printPostResponse = async (event) => {
   const dataResponse = await handleScoreFormSubmit(event);
   if (dataResponse instanceof Error) appendResponsePara('Unable to Post Data');
@@ -42,5 +51,5 @@ const printPostResponse = async (event) => {
 };
 
 export {
-  printList, printPostResponse,
+  printList, printPostResponse, loadList,
 };
