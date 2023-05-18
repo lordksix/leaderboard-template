@@ -64,9 +64,9 @@
   </symbol>
 
   <symbol id="profile-generic" viewBox="0 0 600 600">
-    <circle cx="300" cy="300" r="280" fill="white" clip-path="url(#avoid-antialiasing-bugs)" />
-    <circle cx="300" cy="230" r="115" fill="black"/>
-    <circle cx="300" cy="550" r="205" fill="black" clip-path="url(#circular-border)" />
+    <circle cx="300" cy="300" r="280" fill="black" clip-path="url(#avoid-antialiasing-bugs)" />
+    <circle cx="300" cy="230" r="115" fill="white"/>
+    <circle cx="300" cy="550" r="205" fill="white" clip-path="url(#circular-border)" />
   </symbol> 
 
   <symbol id="icon-rotate-arrow-left" width="800px" height="800px" viewBox="0 0 305.836 305.836">
