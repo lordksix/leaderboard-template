@@ -1,5 +1,6 @@
 import './index.css';
-import { printPostResponse, printList } from './modules/utils.js';
+import './asset/resource/icons.svg';
+import { printPostResponse, printList, loadList } from './modules/utils.js';
 
 const baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 const gameEndPoint = 'games/';
@@ -16,5 +17,5 @@ formScores.setAttribute('action', url);
 refreshScore.setAttribute('name', url);
 
 formScores.addEventListener('submit', printPostResponse);
-
 refreshScore.addEventListener('click', printList);
+window.addEventListener('load', loadList);
