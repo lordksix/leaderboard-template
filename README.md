@@ -49,13 +49,11 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Dinamically generate DOM**
-- **Webpack Implementation**
-- **Wireframe**
+- **TBA**
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-You can find a live demo in [HERE](https://lordksix.github.io/leaderboard-template/).
+**TBD: ** You can find a live demo in [HERE](https://lordksix.github.io/leaderboard-template/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

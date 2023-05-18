@@ -21,11 +21,10 @@ li {
   padding-block: max(2.5vh, 10px);
   width: min(85vw, 550px);
   column-gap: max(20px, 3vw);
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr auto;
 }
 
-.leaderboard-side,
-#post-score {
+.leaderboard-side {
   display: flex;
   flex-flow: column;
   gap: max(1.5vh, 10px);
@@ -34,7 +33,6 @@ li {
 .leaderboard-header {
   display: grid;
   grid-template-columns: 1fr auto;
-  column-gap: max(7.5px, 2vw);
 }
 
 .score-list {
@@ -43,7 +41,6 @@ li {
 
 .score-item {
   padding-inline-start: max(1vw, 5px);
-  padding-inline-end: max(3vw, 15px);
   padding-block: max(0.5vh, 2px);
 }
 
