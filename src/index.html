@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500&display=swap" rel="stylesheet">
   <title>Leaderboard Template</title>
 </head>
 <body>
@@ -13,7 +16,7 @@
       <div class="leaderboard-side">
         <header class="leaderboard-header">
           <h2>Recent scores</h2>
-          <button type="button" id="leaderboard-btn">Refresh</button>
+          <button type="button" id="leaderboard-btn" class="leaderboard-btn">Refresh</button>
         </header>
         <ul class="score-list">
         </ul>
@@ -22,9 +25,9 @@
         <h2>Add your score</h2>
         <form id="post-score">
           <label for="user" class="leaderboard-label">name</label>
-          <input type="text" name="user" id="user" placeholder="Your name" aria-placeholder="Input your name" required>
+          <input type="text" class="leaderboard-input" name="user" id="user" placeholder="Your name" aria-placeholder="Input your name" required>
           <label for="score" class="leaderboard-label">Score</label>
-          <input type="number" name="score" id="score" placeholder="Your score" aria-placeholder="Input your score" requiered>
+          <input type="number" class="leaderboard-input" name="score" id="score" placeholder="Your score" aria-placeholder="Input your score" requiered>
           <button type="submit" class="leaderboard-btn leaderboard-submit">Submit</button>
         </form>
         <p id="formFeedback"></p>

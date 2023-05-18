@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Dosis', sans-serif;
+  padding: 30px;
+}
+
 ul,
 li {
   list-style-type: none;
@@ -13,6 +18,9 @@ li {
   padding-inline: max(2.5vw, 10px);
   padding-block: max(5vh, 20px);
   width: min(95vw, 600px);
+  color: white;
+  background-color: black;
+  border-radius: 30px;
 }
 
 .leaderboard-section {
@@ -28,27 +36,33 @@ li {
 #post-score {
   display: flex;
   flex-flow: column;
-  gap: max(1.5vh, 10px);
+  gap: max(2vh, 15px);
 }
 
 .leaderboard-header {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 8fr 1fr;
   column-gap: max(7.5px, 2vw);
 }
 
 .score-list {
   border: 2px solid black;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 3px rgb(114, 46, 46);
 }
 
 .score-item {
   padding-inline-start: max(1vw, 5px);
-  padding-inline-end: max(3vw, 15px);
+  padding-inline-end: max(5vw, 20px);
   padding-block: max(0.5vh, 2px);
 }
 
 .score-item:nth-child(even) {
-  background-color: gainsboro;
+  background-color: rgb(107, 103, 103);
+}
+.score-item:last-child {
+  border-radius: 0 0 8px 8px;
 }
 
 .leaderboard-label {
@@ -58,6 +72,23 @@ li {
 .leaderboard-btn {
   padding-inline: 7px;
   padding-block: 5px;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 2px rgb(114, 46, 46);
+  cursor: pointer;
+}
+
+.leaderboard-btn:hover {
+  background-color: rgb(114, 46, 46);
+  box-shadow: 0 0 2px 2px gainsboro;
+}
+
+.leaderboard-input {
+  padding-inline: 7px;
+  padding-block: 5px;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 2px rgb(114, 46, 46);
 }
 
 .leaderboard-submit {
