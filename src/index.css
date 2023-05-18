@@ -61,6 +61,7 @@ li {
 .score-item:nth-child(even) {
   background-color: rgb(107, 103, 103);
 }
+
 .score-item:last-child {
   border-radius: 0 0 8px 8px;
 }
