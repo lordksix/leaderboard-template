@@ -4,7 +4,7 @@ import { printPostResponse, printList } from './modules/utils.js';
 const baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 const gameEndPoint = 'games/';
 const gameID = '6lbvUiU6NvtGL9BW17VD';
-const scoresEndPoint = `${gameID}/scoes/`;
+const scoresEndPoint = `${gameID}/scores/`;
 
 const endPoint = `${gameEndPoint}${scoresEndPoint}`;
 const url = `${baseURL}${endPoint}`;
