@@ -16,5 +16,4 @@ formScores.setAttribute('action', url);
 refreshScore.setAttribute('name', url);
 
 formScores.addEventListener('submit', printPostResponse);
-
 refreshScore.addEventListener('click', printList);
