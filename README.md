@@ -52,7 +52,6 @@
 - **Dinamically generate DOM**
 - **Webpack Implementation**
 - **Wireframe**
-- **Add API interactivity**
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -142,7 +141,7 @@ Go to [🚀 Live Demo](#live-demo) to check it out.
 ## 🔭 Future Features <a name="future-features"></a>
 
 Future changes:
-- TBA
+- Improve drag interactivity
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
