@@ -11,6 +11,6 @@ const createList = (elem, classes, dataArr) => {
   return docFrag;
 };
 
-export default {
-  createList,
+export {
+  createList, createElementDefault,
 };
