@@ -13,22 +13,23 @@
       <div class="leaderboard-side">
         <header class="leaderboard-header">
           <h2>Recent scores</h2>
-          <button type="button" class="leaderboard-btn">Refresh</button>
+          <button type="button" id="leaderboard-btn">Refresh</button>
         </header>
         <ul class="score-list">
         </ul>
       </div>
       <div class="leaderboard-side">
         <h2>Add your score</h2>
-        <label for="name" class="leaderboard-label">Name</label>
-        <input type="text" name="name" id="name" placeholder="Your name" aria-placeholder="Input your name">
-        <label for="score" class="leaderboard-label">Score</label>
-        <input type="number" name="score" id="score" placeholder="Your score" aria-placeholder="Input your score">
-        <button type="submit" class="leaderboard-btn leaderboard-submit">Submit</button>
+        <form id="post-score">
+          <label for="user" class="leaderboard-label">name</label>
+          <input type="text" name="user" id="user" placeholder="Your name" aria-placeholder="Input your name" required>
+          <label for="score" class="leaderboard-label">Score</label>
+          <input type="number" name="score" id="score" placeholder="Your score" aria-placeholder="Input your score" requiered>
+          <button type="submit" class="leaderboard-btn leaderboard-submit">Submit</button>
+        </form>
+        <p id="formFeedback"></p>
       </div>
     </section>
 </main>
-  
-
 </body>
 </html>
