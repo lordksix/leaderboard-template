@@ -26,6 +26,11 @@ const appendResponsePara = async (node) => {
   showResponseForm.textContent = node;
 };
 
+/**
+ * Event handler forthe get of data from API
+ * @param {SubmitEvent} event
+ * @returns {void}
+ */
 const printList = async (event) => {
   const dataResponse = await handleRefreshScores(event);
   if (dataResponse instanceof Error) appendResponsePara('Unable to Fetch Data');
@@ -35,6 +40,11 @@ const printList = async (event) => {
   }
 };
 
+/**
+ * Event handler for a form submit event and print response
+ * @param {SubmitEvent} event
+ * @returns {void}
+ */
 const printPostResponse = async (event) => {
   const dataResponse = await handleScoreFormSubmit(event);
   if (dataResponse instanceof Error) appendResponsePara('Unable to Post Data');
