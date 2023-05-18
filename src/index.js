@@ -1,14 +1,20 @@
 import './index.css';
-import createList from './modules/ListItemMod.js';
+import { printPostResponse, printList } from './modules/utils.js';
 
-const data = [
-  'Name: 100', 'Name: 20', 'Name: 50', 'Name: 78',
-  'Name: 125', 'Name: 77', 'Name:42',
-];
+const baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+const gameEndPoint = 'games/';
+const gameID = '6lbvUiU6NvtGL9BW17VD';
+const scoresEndPoint = `${gameID}/scoes/`;
 
-const classes = 'score-item';
-const scoreList = document.querySelector('.score-list');
+const endPoint = `${gameEndPoint}${scoresEndPoint}`;
+const url = `${baseURL}${endPoint}`;
 
-const listFrag = createList.createList('li', classes, data);
+const formScores = document.getElementById('post-score');
+const refreshScore = document.getElementById('leaderboard-btn');
 
-scoreList.appendChild(listFrag);
+formScores.setAttribute('action', url);
+refreshScore.setAttribute('name', url);
+
+formScores.addEventListener('submit', printPostResponse);
+
+refreshScore.addEventListener('click', printList);
