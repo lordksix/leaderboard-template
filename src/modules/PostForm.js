@@ -32,9 +32,7 @@ const postFormDataAsJson = async ({ url, formData }) => {
  */
 const handleScoreFormSubmit = async (event, url) => {
   event.preventDefault();
-
   const scoreForm = event.currentTarget;
-  /* const url = scoreForm.action; */
   try {
     const formData = new FormData(scoreForm);
     scoreForm.reset();

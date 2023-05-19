@@ -18,11 +18,10 @@ const fetchDataJSON = async (URL) => {
  * Event handler for a form submit event.
  * @param {SubmitEvent} event
  */
-const handleRefreshScores = async (event) => {
+const handleRefreshScores = async (event, url) => {
   event.preventDefault();
-  const refreshBtn = event.currentTarget;
   try {
-    const responseData = await fetchDataJSON(refreshBtn.name);
+    const responseData = await fetchDataJSON(url);
     return responseData;
   } catch (error) {
     return error;
@@ -32,10 +31,9 @@ const handleRefreshScores = async (event) => {
 /**
  * Event handler for a form submit event.
  */
-const loadRefreshScores = async () => {
-  const refreshBtn = document.getElementById('leaderboard-btn');
+const loadRefreshScores = async (url) => {
   try {
-    const responseData = await fetchDataJSON(refreshBtn.name);
+    const responseData = await fetchDataJSON(url);
     return responseData;
   } catch (error) {
     return error;

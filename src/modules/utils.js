@@ -37,16 +37,19 @@ const appendResponsePara = async (node) => {
 };
 
 const printList = async (event) => {
-  const dataResponse = await handleRefreshScores(event);
+  const apiURL = createApiURL();
+  const dataResponse = await handleRefreshScores(event, apiURL);
   if (dataResponse instanceof Error) appendResponsePara('Unable to Fetch Data');
   else {
     const listFrag = await createListFrag(dataResponse.result);
+    appendResponsePara('Leaderboard Updated');
     await appendListFrag(listFrag);
   }
 };
 
-const loadList = async (event) => {
-  const dataResponse = await loadRefreshScores(event);
+const loadList = async () => {
+  const apiURL = createApiURL();
+  const dataResponse = await loadRefreshScores(apiURL);
   if (dataResponse instanceof Error) appendResponsePara('Unable to Fetch Data');
   else {
     const listFrag = await createListFrag(dataResponse.result);
