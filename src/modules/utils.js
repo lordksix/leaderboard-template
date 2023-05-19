@@ -1,6 +1,6 @@
 import { createList } from './ListItemMod.js';
 import { handleScoreFormSubmit } from './PostForm.js';
-import { handleRefreshScores } from './GetAPI.js';
+import { handleRefreshScores, loadRefreshScores } from './GetAPI.js';
 
 const createApiURL = () => {
   const baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
@@ -45,6 +45,15 @@ const printList = async (event) => {
   }
 };
 
+const loadList = async (event) => {
+  const dataResponse = await loadRefreshScores(event);
+  if (dataResponse instanceof Error) appendResponsePara('Unable to Fetch Data');
+  else {
+    const listFrag = await createListFrag(dataResponse.result);
+    await appendListFrag(listFrag);
+  }
+};
+
 const printPostResponse = async (event) => {
   const apiURL = createApiURL();
   const dataResponse = await handleScoreFormSubmit(event, apiURL);
@@ -53,5 +62,5 @@ const printPostResponse = async (event) => {
 };
 
 export {
-  printList, printPostResponse,
+  printList, printPostResponse, loadList,
 };

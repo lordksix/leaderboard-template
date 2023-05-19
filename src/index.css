@@ -1,7 +1,16 @@
+:root {
+  --svg-side: clamp(16px, (100vw - 320px) * 1000, clamp(20px, (100vw - 640px) * 1000, clamp(25px, (100vw - 1280px) * 1000, 30px)));
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+  padding: 30px;
 }
 
 ul,
@@ -10,17 +19,20 @@ li {
 }
 
 .leaderboard-app {
-  padding-inline: max(2.5vw, 10px);
+  padding-inline: 15px;
   padding-block: max(5vh, 20px);
   width: min(95vw, 600px);
+  color: black;
+  background-color: bisque;
+  border-radius: 30px;
 }
 
 .leaderboard-section {
   display: grid;
-  padding-inline: max(2.5vw, 10px);
+  padding-inline: 10px;
   padding-block: max(2.5vh, 10px);
-  width: min(85vw, 550px);
-  column-gap: max(20px, 3vw);
+  width: min(91vw, 550px);
+  column-gap: 20px;
   grid-template-columns: auto 1fr;
 }
 
@@ -28,27 +40,46 @@ li {
 #post-score {
   display: flex;
   flex-flow: column;
-  gap: max(1.5vh, 10px);
+  gap: max(2vh, 15px);
 }
 
 .leaderboard-header {
   display: grid;
-  grid-template-columns: 1fr auto;
-  column-gap: max(7.5px, 2vw);
+  grid-template-columns: auto 8fr 1fr;
+  column-gap: 10px;
+}
+
+section svg {
+  height: var(--svg-side);
+  width: var(--svg-side);
 }
 
 .score-list {
-  border: 2px solid black;
+  border: 2px solid rgb(114, 46, 46);
+  z-index: 1;
+  border-radius: 10px;
 }
 
 .score-item {
-  padding-inline-start: max(1vw, 5px);
-  padding-inline-end: max(3vw, 15px);
-  padding-block: max(0.5vh, 2px);
+  padding-inline-start: 10px;
+  padding-inline-end: 20px;
+  padding-block: 2px;
 }
 
 .score-item:nth-child(even) {
-  background-color: gainsboro;
+  background-color: rgb(189, 138, 138);
+}
+
+.score-item:hover {
+  background-color: cadetblue;
+}
+
+.score-item:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.score-item:last-child {
+  border-radius: 0 0 8px 8px;
 }
 
 .leaderboard-label {
@@ -58,6 +89,31 @@ li {
 .leaderboard-btn {
   padding-inline: 7px;
   padding-block: 5px;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 3px skyblue;
+  cursor: pointer;
+}
+
+.profile-generic {
+  z-index: 1;
+  cursor: pointer;
+}
+
+.leaderboard-btn:hover {
+  box-shadow: 0 0 2px 2px rgb(114, 46, 46);
+}
+
+.profile-generic:hover {
+  background-color: skyblue;
+  box-shadow: 0 0 2px 2px rgb(114, 46, 46);
+}
+
+.leaderboard-input {
+  padding-inline: 7px;
+  padding-block: 5px;
+  z-index: 1;
+  border-radius: 10px;
 }
 
 .leaderboard-submit {

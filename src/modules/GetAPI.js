@@ -29,6 +29,19 @@ const handleRefreshScores = async (event) => {
   }
 };
 
+/**
+ * Event handler for a form submit event.
+ */
+const loadRefreshScores = async () => {
+  const refreshBtn = document.getElementById('leaderboard-btn');
+  try {
+    const responseData = await fetchDataJSON(refreshBtn.name);
+    return responseData;
+  } catch (error) {
+    return error;
+  }
+};
+
 export {
-  fetchDataJSON, handleRefreshScores,
+  fetchDataJSON, handleRefreshScores, loadRefreshScores,
 };
