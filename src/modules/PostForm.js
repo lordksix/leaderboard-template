@@ -30,11 +30,11 @@ const postFormDataAsJson = async ({ url, formData }) => {
  * Event handler for a form submit event.
  * @param {SubmitEvent} event
  */
-const handleScoreFormSubmit = async (event) => {
+const handleScoreFormSubmit = async (event, url) => {
   event.preventDefault();
 
   const scoreForm = event.currentTarget;
-  const url = scoreForm.action;
+  /* const url = scoreForm.action; */
   try {
     const formData = new FormData(scoreForm);
     scoreForm.reset();

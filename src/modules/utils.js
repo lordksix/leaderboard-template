@@ -2,6 +2,16 @@ import { createList } from './ListItemMod.js';
 import { handleScoreFormSubmit } from './PostForm.js';
 import { handleRefreshScores } from './GetAPI.js';
 
+const createApiURL = () => {
+  const baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+  const gameEndPoint = 'games/';
+  const gameID = '6lbvUiU6NvtGL9BW17VD';
+  const scoresEndPoint = `${gameID}/scores/`;
+  const endPoint = `${gameEndPoint}${scoresEndPoint}`;
+  const url = `${baseURL}${endPoint}`;
+  return url;
+};
+
 const processDataScore = (dataSet) => {
   const dataStringArr = dataSet.map((data) => `${data.user}: ${data.score}`);
   return dataStringArr;
@@ -36,7 +46,8 @@ const printList = async (event) => {
 };
 
 const printPostResponse = async (event) => {
-  const dataResponse = await handleScoreFormSubmit(event);
+  const apiURL = createApiURL();
+  const dataResponse = await handleScoreFormSubmit(event, apiURL);
   if (dataResponse instanceof Error) appendResponsePara('Unable to Post Data');
   else await appendResponsePara(dataResponse.result);
 };
